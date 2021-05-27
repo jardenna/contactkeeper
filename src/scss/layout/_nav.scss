@@ -1,0 +1,71 @@
+$burgerColor: $color-gray-light;
+$burgerColorActive: $color-gray-dark;
+
+.sticky {
+   position: sticky;
+   top: 0;
+   z-index: 100;
+
+}
+
+.open-nav {
+   @include transition();
+
+   &.main-nav {
+      @include mQ($small) {
+         right: 0;
+      }
+   }
+}
+
+.main-nav {
+   width: 100%;
+   text-align: right;
+   margin: 0;
+
+
+   @include mQ($small) {
+      text-align: left;
+      @include transition();
+      position: fixed;
+      right: -200px;
+      top: 0;
+      width: 200px;
+      height: 100%;
+      z-index: 20;
+      background-color: $color-background-primary;
+   }
+
+   .main-nav-items {
+      font-size: 14px;
+      margin-right: 10px;
+      display: inline-block;
+
+      &.active {
+         a {
+            color: $color-blue-dark;
+         }
+      }
+
+      @include mQ($small) {
+         margin: 20px;
+         display: block;
+      }
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+
+   ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+
+
+
+
+
+
+}

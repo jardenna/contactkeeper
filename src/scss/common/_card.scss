@@ -1,0 +1,68 @@
+.card {
+  margin-bottom: 20px;
+  position: relative;
+  border: 1px solid $color-border;
+
+  &.rounded-img {
+    figure {
+      padding-top: 20px;
+    }
+
+    img {
+      max-width: 29%;
+      border-radius: 50%;
+
+    }
+  }
+
+  &.flex-container {
+    flex-wrap: nowrap;
+  }
+
+  img {
+    max-width: 45%;
+  }
+
+  &.horizontal {
+    img {
+      max-width: 100%;
+
+    }
+
+    &.rounded-img {
+
+
+      img {
+        max-width: 20%;
+
+      }
+    }
+
+    .card-footer {
+      position: relative;
+    }
+
+    &.flex-container {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.card-container {
+  width: 100%;
+  position: relative;
+}
+
+
+
+.card-content {
+  padding: 20px;
+}
+
+.card-footer {
+  width: 100%;
+  text-align: right;
+  padding: 12px;
+
+
+}

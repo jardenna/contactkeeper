@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+
+:root {
+  --focus: 1px dotted #000000;
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  font-family: $font-primary;
+  font-weight: 500;
+  line-height: 20px;
+  color: $color-primary;
+}
+
+h1,
+h2 {
+  font-family: $font-secondary;
+}
+
+a {
+  color: $color-primary-link;
+
+  &:focus {
+    outline: var(--focus);
+    border: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+.not-found-container {
+  padding: 20px;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.flex-container {
+  @include flexbox();
+}
+
+.flex-item {
+  @include flex();
+}
+
+.flex-2 {
+  @include flex($values:2);
+}
+
+.flex-3 {
+  @include flex($values:3);
+}
